@@ -14,7 +14,7 @@ def test_one():
     """
     project_path = "/home/hurn/Deploying-a-Scalable-ML-Pipeline-with-FastAPI"
     data_path = os.path.join(project_path, "data", "census.csv")
-    df = pd.read_csv("data/census.csv")
+    df = pd.read_csv(data_path)
     column_count = 15
     assert len(df.columns) == column_count
     pass

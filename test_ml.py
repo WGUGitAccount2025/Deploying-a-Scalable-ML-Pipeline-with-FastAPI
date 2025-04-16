@@ -1,5 +1,6 @@
 import pytest
 # TODO: add necessary import
+import os
 import pickle
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -11,6 +12,8 @@ def test_one():
     """
     Verifying there are 15 columns in the loaded dataset.
     """
+    project_path = "/home/hurn/Deploying-a-Scalable-ML-Pipeline-with-FastAPI"
+    data_path = os.path.join(project_path, "data", "census.csv")
     df = pd.read_csv("data/census.csv")
     column_count = 15
     assert len(df.columns) == column_count
